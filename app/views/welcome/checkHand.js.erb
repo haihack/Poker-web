@@ -1,0 +1,7 @@
+$("#result").empty()
+
+$("#result").text("<%= @result %>");
+
+<% @error.each do |item| %>
+  $("#result").append("<%= item["message"] %><br>");
+<% end %>
