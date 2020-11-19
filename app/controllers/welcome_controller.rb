@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
 
   def checkHand
     my_data = params[:my_data]
-    uri = URI('http://localhost:3000/api/v1/cards')
+    uri = URI('http://localhost:3000/api/v1/hand_checkings')
     http = Net::HTTP.new(uri.host, uri.port)
     req = Net::HTTP::Post.new(uri.path, 'Content-Type' => 'application/json')
     req.body = {"cards": [my_data]}.to_json

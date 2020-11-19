@@ -1,9 +1,9 @@
 <h1> Check a Porker Hand </h1>
 
 <br>
-<%= form_tag welcome_checkHand_path, method: :post, remote:true do %>
+<%= form_tag welcome_checkHand_path(format: :js), method: :post, remote:true do %>
   <input type="text" name="my_data">
-  <input value="Check" type=submit>
+  <input name="submit" alue="Check" type=submit>
 <% end %>
 
 <div id="result"></div>
